@@ -15,7 +15,6 @@ readonly class ExportOptions
         public readonly string $path,
         public readonly string $filename = '',
         public readonly array  $formatOptions = []
-    )
-    {
+    ) {
     }
 }

@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Metin\Exodus\Enums;
 
 enum ExportFormat: string
@@ -13,12 +15,12 @@ enum ExportFormat: string
         return match ($this) {
             self::CSV => [
                 'delimiter',
-                'includeHeaders'
+                'includeHeaders',
             ],
 
             self::JSON => [
                 'prettyPrint',
-                'unescapeUnicode'
+                'unescapeUnicode',
             ],
         };
     }
@@ -28,12 +30,12 @@ enum ExportFormat: string
         return match ($this) {
             self::CSV => [
                 'delimiter' => ',',
-                'includeHeaders' => true
+                'includeHeaders' => true,
             ],
 
             self::JSON => [
                 'prettyPrint',
-                'unescapeUnicode'
+                'unescapeUnicode',
             ],
         };
     }
