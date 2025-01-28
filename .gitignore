@@ -1,0 +1,19 @@
+/vendor/
+composer.lock
+
+# IDE & Editor files
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# PHP CS Fixer
+.php-cs-fixer.cache
+
+# PHPUnit
+.phpunit.result.cache
+.phpunit.cache
+
+# System files
+.DS_Store
+Thumbs.db
