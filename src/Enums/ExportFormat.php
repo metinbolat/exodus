@@ -16,7 +16,10 @@ enum ExportFormat: string
                 'includeHeaders'
             ],
 
-            // TODO: Add JSON and XML options
+            self::JSON => [
+                'prettyPrint',
+                'unescapeUnicode'
+            ],
         };
     }
 
@@ -26,6 +29,11 @@ enum ExportFormat: string
             self::CSV => [
                 'delimiter' => ',',
                 'includeHeaders' => true
+            ],
+
+            self::JSON => [
+                'prettyPrint',
+                'unescapeUnicode'
             ],
         };
     }

@@ -1,7 +1,7 @@
 {
   "name": "metin/exodus",
   "description": "Simple and flexible data export library for PHP",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "type": "library",
   "license": "MIT",
 

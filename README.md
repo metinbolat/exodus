@@ -57,12 +57,50 @@ if ($result->success) {
 }
 ```
 
+### JSON Export
+
+```php
+use Metin\Exodus\Core\ExportManager;
+use Metin\Exodus\Exporters\JsonExporter;
+use Metin\Exodus\Dto\ExportOptions;
+
+// Prepare data
+$data = [
+    ['name' => 'John Doe', 'email' => 'john@example.com'],
+    ['name' => 'Jane Doe', 'email' => 'jane@example.com']
+];
+
+// Configure export options
+$options = new ExportOptions(
+    path: '/path/to/export',
+    filename: 'users.json',
+    formatOptions: [
+        'prettyPrint' => true,
+        'unescapeUnicode' => true
+    ]
+);
+
+// Create exporter and process
+$exporter = new ExportManager(new JsonExporter());
+$result = $exporter->process($data, $options);
+
+if ($result->success) {
+    echo "File exported to: " . $result->path;
+} else {
+    echo "Export failed: " . $result->error;
+}
+```
+
 ## Features
 
-- Export data to CSV format
-- Configurable CSV delimiter
-- Optional headers
-- Automatic file naming
+- Export data to multiple formats (CSV, JSON)
+- Format specific options support
+- CSV Features:
+- - Configurable delimiter
+- - Optional headers
+- JSON Features:
+- - Pretty print option
+- - Unicode character support
 - Comprehensive error handling
 - Data validation
 - Type-safe objects
