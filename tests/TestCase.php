@@ -2,7 +2,6 @@
 
 declare(strict_types=1);
 
-
 namespace Metin\Exodus\Tests;
 
 use PHPUnit\Framework\TestCase as BaseTestCase;

@@ -60,7 +60,7 @@ class XmlExporterTest extends TestCase
             formatOptions: [
                 'rootElement' => 'users',
                 'itemElement' => 'user',
-            ]  
+            ]
         );
 
         $result = $this->manager->process($this->testData, $options);
@@ -75,7 +75,7 @@ class XmlExporterTest extends TestCase
     public function test_it_generates_filename_if_not_provided(): void
     {
         $options = new ExportOptions(
-          path: $this->outputPath,  
+            path: $this->outputPath,
         );
 
         $result = $this->manager->process($this->testData, $options);

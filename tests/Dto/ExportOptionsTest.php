@@ -22,7 +22,7 @@ class ExportOptionsTest extends TestCase
     {
         $customFormatOptions = [
             'delimiter' => ';',
-            'includeHeaders' => false
+            'includeHeaders' => false,
         ];
 
         $options = new ExportOptions(

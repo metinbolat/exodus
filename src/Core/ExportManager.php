@@ -17,7 +17,8 @@ class ExportManager
      */
     public function __construct(
         private readonly ExportStrategy $strategy
-    ) {}
+    ) {
+    }
     /**
      * Process the given data array and export it using the configured strategy.
      *

@@ -33,7 +33,7 @@ class CsvExporterTest extends TestCase
             filename: 'test.csv',
             formatOptions: [
                 'delimiter' => ',',
-                'includeHeaders' => true
+                'includeHeaders' => true,
             ]
         );
 
@@ -59,7 +59,7 @@ class CsvExporterTest extends TestCase
             filename: 'no-headers.csv',
             formatOptions: [
                 'delimiter' => ',',
-                'includeHeaders' => false
+                'includeHeaders' => false,
             ]
         );
 
@@ -83,7 +83,7 @@ class CsvExporterTest extends TestCase
             filename: 'semicolon.csv',
             formatOptions: [
                 'delimiter' => ';',
-                'includeHeaders' => true
+                'includeHeaders' => true,
             ]
         );
 
