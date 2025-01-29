@@ -17,10 +17,16 @@ enum ExportFormat: string
                 'delimiter',
                 'includeHeaders',
             ],
-
             self::JSON => [
                 'prettyPrint',
                 'unescapeUnicode',
+            ],
+            self::XML => [
+                'rootElement',
+                'itemElement',
+                'prettyPrint',
+                'version',
+                'encoding',
             ],
         };
     }
@@ -32,10 +38,16 @@ enum ExportFormat: string
                 'delimiter' => ',',
                 'includeHeaders' => true,
             ],
-
             self::JSON => [
-                'prettyPrint',
-                'unescapeUnicode',
+                'prettyPrint' => true,
+                'unescapeUnicode' => true,
+            ],
+            self::XML => [
+                'rootElement' => 'root',
+                'itemElement' => 'item',
+                'prettyPrint' => true,
+                'version' => '1.0',
+                'encoding' => 'UTF-8',
             ],
         };
     }
